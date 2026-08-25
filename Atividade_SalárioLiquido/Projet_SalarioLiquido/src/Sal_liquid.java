@@ -52,7 +52,7 @@ public class Sal_liquid {
     
     public double Exibir_SalLiquido(){
     
-        double Sal_liquido = this.Sal_bruto - this.DescontoIR() - this.DescontoINSS() - this.DescontoFaltas();
+        double Sal_liquido = this.Sal_bruto - this.DescontoINSS() - this.DescontoIR() - this.DescontoFaltas();
         
                 
         return Sal_liquido;
