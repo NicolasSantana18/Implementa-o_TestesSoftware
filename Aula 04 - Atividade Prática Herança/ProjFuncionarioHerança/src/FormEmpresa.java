@@ -29,6 +29,7 @@ public class FormEmpresa extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         botaoHorista = new javax.swing.JButton();
         botaoSair = new javax.swing.JButton();
+        botaoAutonomo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +48,13 @@ public class FormEmpresa extends javax.swing.JFrame {
         botaoSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botaoSairActionPerformed(evt);
+            }
+        });
+
+        botaoAutonomo.setText("AUTONOMO");
+        botaoAutonomo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAutonomoActionPerformed(evt);
             }
         });
 
@@ -72,6 +80,10 @@ public class FormEmpresa extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(botaoSair)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(187, 187, 187)
+                .addComponent(botaoAutonomo)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,7 +94,9 @@ public class FormEmpresa extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(52, 52, 52)
                 .addComponent(botaoHorista)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 210, Short.MAX_VALUE)
+                .addGap(59, 59, 59)
+                .addComponent(botaoAutonomo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                 .addComponent(botaoSair)
                 .addContainerGap())
         );
@@ -99,6 +113,11 @@ public class FormEmpresa extends javax.swing.JFrame {
     private void botaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSairActionPerformed
         System.exit(0);
     }//GEN-LAST:event_botaoSairActionPerformed
+
+    private void botaoAutonomoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAutonomoActionPerformed
+        new FormAutonomo().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoAutonomoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,6 +155,7 @@ public class FormEmpresa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoAutonomo;
     private javax.swing.JButton botaoHorista;
     private javax.swing.JButton botaoSair;
     private javax.swing.JLabel jLabel1;
