@@ -30,6 +30,7 @@ public class FormEmpresa extends javax.swing.JFrame {
         botaoHorista = new javax.swing.JButton();
         botaoSair = new javax.swing.JButton();
         botaoAutonomo = new javax.swing.JButton();
+        botaoMensalista = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,12 +59,22 @@ public class FormEmpresa extends javax.swing.JFrame {
             }
         });
 
+        botaoMensalista.setText("MENSALISTA");
+        botaoMensalista.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMensalistaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(botaoSair))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -73,17 +84,18 @@ public class FormEmpresa extends javax.swing.JFrame {
                                 .addGap(138, 138, 138)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(197, 197, 197)
-                                .addComponent(botaoHorista)))
-                        .addGap(0, 181, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(botaoSair)))
+                                .addGap(187, 187, 187)
+                                .addComponent(botaoAutonomo)))
+                        .addGap(0, 181, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(187, 187, 187)
-                .addComponent(botaoAutonomo)
+                .addGap(51, 51, 51)
+                .addComponent(botaoHorista)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoMensalista)
+                .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,11 +104,13 @@ public class FormEmpresa extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel2)
-                .addGap(52, 52, 52)
+                .addGap(85, 85, 85)
                 .addComponent(botaoHorista)
-                .addGap(59, 59, 59)
+                .addGap(26, 26, 26)
                 .addComponent(botaoAutonomo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addGap(25, 25, 25)
+                .addComponent(botaoMensalista)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(botaoSair)
                 .addContainerGap())
         );
@@ -118,6 +132,11 @@ public class FormEmpresa extends javax.swing.JFrame {
         new FormAutonomo().setVisible(true);
         dispose();
     }//GEN-LAST:event_botaoAutonomoActionPerformed
+
+    private void botaoMensalistaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMensalistaActionPerformed
+        new FormMensal().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoMensalistaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,6 +176,7 @@ public class FormEmpresa extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoAutonomo;
     private javax.swing.JButton botaoHorista;
+    private javax.swing.JButton botaoMensalista;
     private javax.swing.JButton botaoSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
