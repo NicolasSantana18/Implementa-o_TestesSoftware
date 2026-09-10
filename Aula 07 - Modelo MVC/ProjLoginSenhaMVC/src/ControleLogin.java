@@ -36,9 +36,7 @@ public class ControleLogin {
             
             this.LimiteTentativas();
         
-            new FormLoginSenha().setVisible(true);
-            
-            
+                      
         
         }
     
@@ -46,21 +44,23 @@ public class ControleLogin {
     }
     
     public void LimiteTentativas(){
-        
-        if (usuario.Logar() == false){
-        
+                           
           tentativas += 1;
-          JOptionPane.showMessageDialog(null, "Tentativas Restantes: 3/" + tentativas);
+                    
+          if (tentativas < 3){
           
-          if (tentativas > 3){
-          
-              JOptionPane.showMessageDialog(null, "Tentativas Encerradas, Até mais!!");
-              System.exit(0);
+              JOptionPane.showMessageDialog(null, "Tentativas Restantes: 3 / " + tentativas);
               
+          
+          } 
+          else {
+          
+                JOptionPane.showMessageDialog(null, "Tentativas Encerradas, Até mais!!");
+                System.exit(0);
           
           }
         
-        }
+        
         
     
     
