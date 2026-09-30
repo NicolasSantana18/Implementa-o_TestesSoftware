@@ -8,7 +8,7 @@ import java.sql.DriverManager;
 
 
 public class ControleAluno {
-    
+    //Instância
     Aluno aluno = new Aluno();
     
     Connection conexao;
@@ -22,7 +22,7 @@ public class ControleAluno {
             // definição de variáveis com as informações para conexão
             String usuario="root";
             String senha="";
-            String nomebanco="notasalunodb"; //o do professor é notasalunobd, o nosso é diferente. Mudar no banco do Mysql e aqui
+            String nomebanco="notasalunobd"; 
             String servidor="localhost:3306";
             String driver="com.mysql.cj.jdbc.Driver";
             // carregando o driver
