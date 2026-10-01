@@ -75,4 +75,63 @@ public class ControleAluno {
         
         }
     }
+    
+    
+    public void listar(){
+    
+        try{
+        
+            instrucaosql = conexao.prepareStatement("Select * From alunos");
+            //lista recebe um conjunto de registros
+            lista = instrucaosql.executeQuery();
+            //A lista é percorrida pela condição "enquanto houver o próximo"
+            while(lista.next()){
+                //cada elemento do registro é separado pelo nome do campo
+                System.out.println("RGM: " + lista.getString("rgm"));
+                System.out.println("NOME: " +lista.getString("nome"));
+                System.out.println("NOTA 1: " + lista.getString("nota1"));
+                System.out.println("NOTA 2: " + lista.getString("nota2"));
+                System.out.println();
+                
+            }
+        
+        }
+        catch (Exception e){
+        
+            JOptionPane.showMessageDialog(null,"Problemas no acesso ao BD");
+        
+        }
+    
+    }
+    
+    
+    public String Consultar(int rgm){
+        String registro = "";
+        
+        try{
+        
+            instrucaosql = conexao.prepareStatement("Select * From alunos Where rgm=" + rgm);
+            lista = instrucaosql.executeQuery();
+            if (lista.next()){
+                //variável recebe cada dado separado por ; ex: 1234;Antonio;6;9
+                registro =  lista.getString("nome") + ";"+
+                            lista.getString("nota1") + ";"+
+                            lista.getString("nota2");
+            }
+            else {
+            
+                JOptionPane.showMessageDialog(null,"Aluno Não Encontrado");
+            
+            }
+                
+        }
+        catch (Exception e){
+        
+            JOptionPane.showMessageDialog(null,"Problemas no acesso ao BD");
+        
+        }
+    
+        return registro;
+    
+    }
 }
