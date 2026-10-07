@@ -38,6 +38,8 @@ public class FormAluno extends javax.swing.JFrame {
         botaoCadastrar = new javax.swing.JButton();
         botaoListar = new javax.swing.JButton();
         botaoConsultar = new javax.swing.JButton();
+        botaoAlterar = new javax.swing.JButton();
+        botaoExcluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +91,20 @@ public class FormAluno extends javax.swing.JFrame {
             }
         });
 
+        botaoAlterar.setText("ALTERAR");
+        botaoAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoAlterarActionPerformed(evt);
+            }
+        });
+
+        botaoExcluir.setText("EXCLUIR");
+        botaoExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoExcluirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,7 +139,11 @@ public class FormAluno extends javax.swing.JFrame {
                                     .addComponent(TextNota1, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
                                     .addComponent(TextNota2))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(botaoAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,7 +170,9 @@ public class FormAluno extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoCadastrar)
                     .addComponent(botaoListar)
-                    .addComponent(botaoConsultar))
+                    .addComponent(botaoConsultar)
+                    .addComponent(botaoAlterar)
+                    .addComponent(botaoExcluir))
                 .addGap(48, 48, 48))
         );
 
@@ -208,6 +230,24 @@ public class FormAluno extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botaoConsultarActionPerformed
 
+    private void botaoAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAlterarActionPerformed
+        int numRgm = Integer.parseInt(this.TextRGM.getText());
+        String nome_aluno = this.TextNomeAluno.getText();
+        double n1 = Double.parseDouble(this.TextNota1.getText());
+        double n2 = Double.parseDouble(this.TextNota2.getText());
+        controle.Alterar(numRgm, nome_aluno, n1, n2);
+        this.TextRGM.setText("");
+        this.TextNomeAluno.setText("");
+        this.TextNota1.setText("");
+        this.TextNota2.setText("");
+    }//GEN-LAST:event_botaoAlterarActionPerformed
+
+    private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
+        int numRgm = Integer.parseInt(this.TextRGM.getText());
+        controle.Excluir(numRgm);
+        this.TextRGM.setText("");
+    }//GEN-LAST:event_botaoExcluirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -248,8 +288,10 @@ public class FormAluno extends javax.swing.JFrame {
     private javax.swing.JTextField TextNota1;
     private javax.swing.JTextField TextNota2;
     private javax.swing.JTextField TextRGM;
+    private javax.swing.JButton botaoAlterar;
     private javax.swing.JButton botaoCadastrar;
     private javax.swing.JButton botaoConsultar;
+    private javax.swing.JButton botaoExcluir;
     private javax.swing.JButton botaoListar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

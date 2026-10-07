@@ -134,4 +134,56 @@ public class ControleAluno {
         return registro;
     
     }
+    
+    
+    public void Alterar(int rgm, String nm, double n1, double n2){
+    
+        try{
+            instrucaosql=conexao.prepareStatement("update alunos set nome='"+nm+"',nota1='"+n1+"',nota2='"+n2+"'where rgm="+rgm);
+            int verifica=instrucaosql.executeUpdate();
+            if (verifica==1){
+            
+                JOptionPane.showMessageDialog(null,"Registro Alterado com Sucesso!!!");
+            }
+            else{
+                JOptionPane.showMessageDialog(null," Vish, Deu Merda!!");
+            }
+        
+        }
+        catch(Exception e){
+        
+            JOptionPane.showMessageDialog(null,"Problemas no acesso ao BD");
+        
+        }
+    
+    
+    }
+    
+    
+    public void Excluir(int rgm){
+    
+        try{
+            instrucaosql = conexao.prepareStatement("delete from alunos where rgm="+rgm);
+            int verifica = instrucaosql.executeUpdate();
+            if (verifica == 1){
+            
+                 JOptionPane.showMessageDialog(null,"Aluno Excluido com Sucesso");
+            
+            }
+            else{
+            
+                 JOptionPane.showMessageDialog(null,"O Aluno não quis ser deletado");
+            
+            }
+        
+        }
+        
+        catch (Exception e){
+        
+             JOptionPane.showMessageDialog(null,"Problemas no acesso ao BD");
+        
+        }
+    
+    
+    }
 }
