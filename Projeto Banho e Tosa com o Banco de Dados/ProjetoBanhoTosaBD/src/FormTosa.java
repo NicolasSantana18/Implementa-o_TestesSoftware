@@ -9,7 +9,7 @@
  */
 public class FormTosa extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormTosa.class.getName());
+    ControlleAnimal controle = new ControlleAnimal();
 
     /**
      * Creates new form FormTosa
@@ -60,7 +60,7 @@ public class FormTosa extends javax.swing.JFrame {
                 }
             }
         } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+            
         }
         //</editor-fold>
 
