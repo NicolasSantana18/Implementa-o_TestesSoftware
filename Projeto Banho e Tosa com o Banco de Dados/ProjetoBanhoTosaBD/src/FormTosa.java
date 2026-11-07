@@ -39,6 +39,18 @@ public class FormTosa extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         textRaca = new javax.swing.JTextField();
         botaoCadastrar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        botaoConsultar = new javax.swing.JButton();
+        botaoEditar = new javax.swing.JButton();
+        botaoExcluir = new javax.swing.JButton();
+        botaoListar = new javax.swing.JButton();
+        botaoListarPorte = new javax.swing.JButton();
+        botaoListarRaca = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        textValorTotal = new javax.swing.JTextField();
+        botaoCalcularValor = new javax.swing.JButton();
+        botaoLimparCampos = new javax.swing.JButton();
+        botaoSair = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,67 +70,161 @@ public class FormTosa extends javax.swing.JFrame {
         botaoCadastrar.setText("Cadastrar");
         botaoCadastrar.addActionListener(this::botaoCadastrarActionPerformed);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Projeto Banho e Tosa");
+
+        botaoConsultar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoConsultar.setText("Consultar");
+        botaoConsultar.addActionListener(this::botaoConsultarActionPerformed);
+
+        botaoEditar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoEditar.setText("Editar");
+        botaoEditar.addActionListener(this::botaoEditarActionPerformed);
+
+        botaoExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoExcluir.setText("Excluir");
+        botaoExcluir.addActionListener(this::botaoExcluirActionPerformed);
+
+        botaoListar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoListar.setText("Listar Todos");
+        botaoListar.addActionListener(this::botaoListarActionPerformed);
+
+        botaoListarPorte.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoListarPorte.setText("Listar por Porte");
+        botaoListarPorte.addActionListener(this::botaoListarPorteActionPerformed);
+
+        botaoListarRaca.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoListarRaca.setText("Listar por Raça");
+        botaoListarRaca.addActionListener(this::botaoListarRacaActionPerformed);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setText("Calcular Valor Total: ");
+
+        botaoCalcularValor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoCalcularValor.setText("Calcular");
+        botaoCalcularValor.addActionListener(this::botaoCalcularValorActionPerformed);
+
+        botaoLimparCampos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botaoLimparCampos.setText("Limpar campos");
+        botaoLimparCampos.addActionListener(this::botaoLimparCamposActionPerformed);
+
+        botaoSair.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        botaoSair.setText("SAIR");
+        botaoSair.addActionListener(this::botaoSairActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(textRaca, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textPorte, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(textNomeDono))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(botaoListar)
+                                        .addGap(55, 55, 55)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(botaoLimparCampos)
+                                            .addComponent(botaoListarPorte))
+                                        .addGap(42, 42, 42))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(textNomeAnimal))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(textPorte, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(textNomeAnimal)
+                                    .addComponent(textNomeDono, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(textCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel5)
                                 .addGap(18, 18, 18)
-                                .addComponent(textCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(textRaca, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(88, 88, 88)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(botaoExcluir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(botaoEditar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(botaoConsultar, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(botaoCadastrar)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
-                        .addComponent(botaoCadastrar)))
-                .addContainerGap(109, Short.MAX_VALUE))
+                        .addComponent(jLabel7)
+                        .addGap(18, 18, 18)
+                        .addComponent(textValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botaoCalcularValor)))
+                .addContainerGap(103, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(botaoListarRaca)
+                .addGap(174, 174, 174))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botaoSair)
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(79, 79, 79)
+                .addGap(27, 27, 27)
+                .addComponent(jLabel6)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(botaoCadastrar)
+                        .addGap(33, 33, 33)
+                        .addComponent(botaoConsultar)
+                        .addGap(37, 37, 37)
+                        .addComponent(botaoEditar)
+                        .addGap(44, 44, 44)
+                        .addComponent(botaoExcluir))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(textCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(textNomeDono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(textNomeAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(textPorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(textRaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(textCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
+                    .addComponent(botaoListarRaca)
+                    .addComponent(botaoListarPorte)
+                    .addComponent(botaoListar))
+                .addGap(42, 42, 42)
+                .addComponent(botaoLimparCampos)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(textNomeDono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(textNomeAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(textPorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(textRaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addComponent(botaoCadastrar)
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addComponent(jLabel7)
+                    .addComponent(textValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCalcularValor))
+                .addGap(18, 18, 18)
+                .addComponent(botaoSair)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();
@@ -143,6 +249,92 @@ public class FormTosa extends javax.swing.JFrame {
         this.textPorte.setText("");
         this.textRaca.setText("");
     }//GEN-LAST:event_botaoCadastrarActionPerformed
+
+    private void botaoEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarActionPerformed
+        int cpf = Integer.parseInt(this.textCPF.getText());
+        String nome_dono = this.textNomeDono.getText();
+        String nome_animal = this.textNomeAnimal.getText();
+        String porte = this.textPorte.getText();
+        String raca = this.textRaca.getText();
+        
+        controle.Alterar(cpf, nome_dono, nome_animal, porte, raca);
+        
+        this.textCPF.setText("");
+        this.textNomeDono.setText("");
+        this.textNomeAnimal.setText("");
+        this.textPorte.setText("");
+        this.textRaca.setText("");
+    }//GEN-LAST:event_botaoEditarActionPerformed
+
+    private void botaoConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConsultarActionPerformed
+        int cpf = Integer.parseInt(this.textCPF.getText());
+        
+        String registro = controle.Consultar(cpf);
+        
+        if (!registro.equals("")){
+        
+            String[] noti = registro.split(";");
+            
+            this.textNomeDono.setText(noti[0]);
+            this.textNomeAnimal.setText(noti[1]);
+            this.textPorte.setText(noti[2]);
+            this.textRaca.setText(noti[3]);
+        
+        }
+    }//GEN-LAST:event_botaoConsultarActionPerformed
+
+    private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
+        int cpf = Integer.parseInt(this.textCPF.getText());
+        
+        controle.Excluir(cpf);
+        
+        this.textCPF.setText("");
+        this.textNomeDono.setText("");
+        this.textNomeAnimal.setText("");
+        this.textPorte.setText("");
+        this.textRaca.setText("");
+    }//GEN-LAST:event_botaoExcluirActionPerformed
+
+    private void botaoListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoListarActionPerformed
+        controle.listarTodos();
+    }//GEN-LAST:event_botaoListarActionPerformed
+
+    private void botaoListarPorteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoListarPorteActionPerformed
+        String porte = this.textPorte.getText();
+        
+        controle.listarPorte(porte);
+        
+        this.textPorte.setText("");
+    }//GEN-LAST:event_botaoListarPorteActionPerformed
+
+    private void botaoListarRacaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoListarRacaActionPerformed
+        String raca = this.textRaca.getText();
+        
+        controle.listarRaca(raca);
+        
+        this.textRaca.setText("");
+    }//GEN-LAST:event_botaoListarRacaActionPerformed
+
+    private void botaoCalcularValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalcularValorActionPerformed
+        String prt = this.textPorte.getText();
+        
+        Double valorTotal = controle.CalcularValor(prt);
+        
+        this.textValorTotal.setText("" + valorTotal);
+    }//GEN-LAST:event_botaoCalcularValorActionPerformed
+
+    private void botaoLimparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLimparCamposActionPerformed
+        this.textCPF.setText("");
+        this.textNomeDono.setText("");
+        this.textNomeAnimal.setText("");
+        this.textPorte.setText("");
+        this.textRaca.setText("");
+        this.textValorTotal.setText("");
+    }//GEN-LAST:event_botaoLimparCamposActionPerformed
+
+    private void botaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_botaoSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,15 +363,27 @@ public class FormTosa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botaoCadastrar;
+    private javax.swing.JButton botaoCalcularValor;
+    private javax.swing.JButton botaoConsultar;
+    private javax.swing.JButton botaoEditar;
+    private javax.swing.JButton botaoExcluir;
+    private javax.swing.JButton botaoLimparCampos;
+    private javax.swing.JButton botaoListar;
+    private javax.swing.JButton botaoListarPorte;
+    private javax.swing.JButton botaoListarRaca;
+    private javax.swing.JButton botaoSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField textCPF;
     private javax.swing.JTextField textNomeAnimal;
     private javax.swing.JTextField textNomeDono;
     private javax.swing.JTextField textPorte;
     private javax.swing.JTextField textRaca;
+    private javax.swing.JTextField textValorTotal;
     // End of variables declaration//GEN-END:variables
 }
