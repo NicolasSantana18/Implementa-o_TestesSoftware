@@ -273,7 +273,7 @@ public class ControlleAnimal {
         
         }
         
-        else if ("Médio".equals(prt) || "médio".equals(prt)){
+        else if ("Médio".equals(prt) || "médio".equals(prt) || "medio".equals(prt)){
         
             return 50.0;
         }
