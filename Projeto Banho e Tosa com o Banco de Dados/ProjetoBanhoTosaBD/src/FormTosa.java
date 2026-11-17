@@ -316,7 +316,7 @@ public class FormTosa extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoListarRacaActionPerformed
 
     private void botaoCalcularValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCalcularValorActionPerformed
-        String prt = this.textPorte.getText();
+        String prt = this.textPorte.getText().trim().toLowerCase();
         
         Double valorTotal = controle.CalcularValor(prt);
         

@@ -267,13 +267,13 @@ public class ControlleAnimal {
     public double CalcularValor(String prt){
         
         
-        if ("Pequeno".equals(prt) || "pequeno".equals(prt)){
+        if ("pequeno".equals(prt)){
         
             return 35.0;
         
         }
         
-        else if ("Médio".equals(prt) || "médio".equals(prt) || "medio".equals(prt)){
+        else if ("médio".equals(prt) || "medio".equals(prt)){
         
             return 50.0;
         }
