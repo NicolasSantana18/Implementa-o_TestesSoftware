@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -235,22 +238,29 @@ public class FormTosa extends javax.swing.JFrame {
     }//GEN-LAST:event_textNomeDonoActionPerformed
 
     private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
-        int cpf = Integer.parseInt(this.textCPF.getText());
-        String nome_dono = this.textNomeDono.getText();
-        String nome_animal = this.textNomeAnimal.getText();
-        String porte = this.textPorte.getText();
-        String raca = this.textRaca.getText();
+        try{
+            int cpf = Integer.parseInt(this.textCPF.getText());
+            String nome_dono = this.textNomeDono.getText();
+            String nome_animal = this.textNomeAnimal.getText();
+            String porte = this.textPorte.getText();
+            String raca = this.textRaca.getText();
+
+            controle.Cadastrar(cpf, nome_dono, nome_animal, porte, raca);
+
+            this.textCPF.setText("");
+            this.textNomeDono.setText("");
+            this.textNomeAnimal.setText("");
+            this.textPorte.setText("");
+            this.textRaca.setText(""); 
+        }
+        catch(NumberFormatException e){
         
-        controle.Cadastrar(cpf, nome_dono, nome_animal, porte, raca);
-        
-        this.textCPF.setText("");
-        this.textNomeDono.setText("");
-        this.textNomeAnimal.setText("");
-        this.textPorte.setText("");
-        this.textRaca.setText("");
+            JOptionPane.showMessageDialog(null,"Digite somente números / erro:" + e);
+        }
     }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     private void botaoEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEditarActionPerformed
+        
         int cpf = Integer.parseInt(this.textCPF.getText());
         String nome_dono = this.textNomeDono.getText();
         String nome_animal = this.textNomeAnimal.getText();
@@ -264,9 +274,11 @@ public class FormTosa extends javax.swing.JFrame {
         this.textNomeAnimal.setText("");
         this.textPorte.setText("");
         this.textRaca.setText("");
+        
     }//GEN-LAST:event_botaoEditarActionPerformed
 
     private void botaoConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConsultarActionPerformed
+        
         int cpf = Integer.parseInt(this.textCPF.getText());
         
         String registro = controle.Consultar(cpf);
@@ -281,18 +293,22 @@ public class FormTosa extends javax.swing.JFrame {
             this.textRaca.setText(noti[3]);
         
         }
+        
     }//GEN-LAST:event_botaoConsultarActionPerformed
 
     private void botaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoExcluirActionPerformed
+            
         int cpf = Integer.parseInt(this.textCPF.getText());
-        
+
         controle.Excluir(cpf);
-        
+
         this.textCPF.setText("");
         this.textNomeDono.setText("");
         this.textNomeAnimal.setText("");
         this.textPorte.setText("");
         this.textRaca.setText("");
+
+        
     }//GEN-LAST:event_botaoExcluirActionPerformed
 
     private void botaoListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoListarActionPerformed
