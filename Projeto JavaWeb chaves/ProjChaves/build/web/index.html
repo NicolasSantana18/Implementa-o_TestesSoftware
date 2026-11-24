@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Página Inicial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            header {
+  
+            background-color: #0066cc;
+            background: linear-gradient(
+                90deg,
+                #003380 0%,    /* Azul profundo na esquerda */
+                #0066cc 50%,   /* Azul royal no centro */
+                #1e90ff 100%   /* Azul celeste na direita */
+            );
+
+            color: #ffffff;
+            padding: 20px;
+            padding-left: 30px;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+            }
+            
+            #icone {
+               width: 130px;
+               height: 130px;
+               border-radius: 50%;
+            }
+            
+            h1{
+                flex: 1;
+                text-align: center;
+                margin: 0;
+                padding-right: 5em;
+                color: orange;
+                font-family: "Arial";
+            }
+            
+            nav {
+                margin-top: 0px;
+                text-align: center;
+                margin-right: 30px;
+                background-color: orange;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                margin-right: 20em;
+                margin-left: 20em;
+                border-radius: 0px 10px 20px 20px;
+            }
+            
+            a {
+                
+                padding-left: 30px;
+                padding-right: 30px;
+                text-decoration: none;
+                border: 2px solid black;
+                border-radius: 30px;
+                margin-top: 30px;
+                color: black;
+                background-color: greenyellow;
+                font-family: "Arial";
+                transition: blue 0.2s ease;
+            }
+            
+            a:hover{
+                color: blue;
+            }
+            
+            a:active {
+                color: chartreuse;
+                background-color: #003380;
+            }
+            
+            #cadastro{
+                margin-right: 60px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+            
+            #listar{
+                margin-left: 60px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+            
+            main {
+                margin-top: 40px;
+                margin-left: 10em;
+                margin-right: 10em;
+                background-color: beige;
+                padding-top: 3px;
+                padding-bottom: 10px;
+                padding-left: 20px;
+                padding-right: 10px;
+                border-radius: 20px;
+            }
+            
+            h2{
+                font-family: "Arial";
+                color: blue;
+                margin-top: 40px;
+            }
+            
+            p{
+                font-family: "Inter", "Roboto", "Open Sans", "Segoe UI", Arial, sans-serif;
+                margin-top: 18px;
+                text-align: justify;
+                margin-right: 15px;
+                line-height: 1.3;
+                text-indent: 1em;
+            }
+            
+            h3{
+                font-family: "Arial";
+                margin-top: 40px;
+                margin-bottom: 10px;
+                color: orangered;
+            }
+            
+            
+            #personagem {
+                width: 25%;
+                height: 25%;
+                border-radius: 20px
+            }
+            
+            
+            footer {
+                width: 100%;
+                background-color: black;
+                color: white;
+                padding-bottom: 20px;
+                padding-top: 10px;
+                margin-top: 15px;
+                border-radius: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            
+            <img id="icone" src="Imagens/IconeChaves.jpg" alt="IconeChaves"/>
+            
+            <h1>A História do Chaves</h1>
+            
+            
+        </header>
+        
+        <div>
+            
+            <nav>
+                <a id="cadastro" href="Cadastro.html">Cadastrar</a>
+                <a id="listar" href="Listar.jsp">Listar</a>
+            </nav>
+                   
+        </div>
+        
+        <main>
+            
+            <h2>Como surgiu o Chaves do 8?</h2>
+            
+            <p>Criada em 1971 pelo humorista mexicano Roberto Gómez Bolaños, Chaves (El Chavo del Ocho) 
+            surgiu como uma esquete no programa Chespirito fazendo tanto sucesso que acabou chamando a atenção 
+            dos executivos do canal, que encomendaram um piloto para o humorista. O programa não demorou para fazer 
+            sucesso no México e em outros países da América Latina.</p>
+            
+            <p>No entanto, a série foi chegar no Brasil apenas em 1984, onde ganhou um título que soava melhor na nossa 
+            língua: Chaves! De lá pra cá, o seriado conquistou tantos fãs que, mesmo não postando mais episódios, se 
+            tornou um programa com muita presença na Tv</p>
+            
+            
+            <h2>Personagens de Chaves</h2>
+            <p>Pra sorte de Chaves, as pessoas que vivem na vila têm compaixão dele e, apesar de quase sempre 
+            perderem a paciência com ele, no fundo sabem que ele é uma criança de bom coração. Os moradores da vila são:</p>
+            
+            
+            <h3>Chaves (Roberto Gómez Bolaños)</h3>
+            <img id="personagem" src="Imagens/FotoChaves.jfif" alt="Foto Chaves"/>
+            
+            <p><strong>Chaves</strong> é um garoto órfão que mora na casa número 8 da vila. E não, 
+            ele não morava dentro do barril, aquele sempre foi seu esconderijo
+            Todos os dias, entre uma brincadeira em outra, ele tenta fazer o seu 
+            melhor para arranjar o que comer e sobreviver.</p>
+            
+            <p>Seu nome verdadeiro, sua origem e até mesmo quem cuida dele são um mistério nunca revelado pela série.
+            Apesar de todas as suas dificuldades, Chaves é um menino esforçado que conta com o 
+            apoio de todos da sua tão querida vizinhança para ir tocando a vida. Entre uma trapalhada 
+            e uma briga, no fundo todos ali são como uma grande família.</p>
+            
+            
+            <h3>Seu Madruga (Ramón Valdez)</h3>
+            <img id="personagem" src="Imagens/FotoSeuMadruga.jfif" alt="alt"/>
+            
+            <p><strong>O Endividado Seu Madruga</strong> é um dos personagens mais carismáticos do seriado. 
+            Viúvo e pai de uma menina, a Chiquinha, Seu Madruga não é muito 
+            fã de trabalhar e sempre faz de tudo para escapar da sua eterna dívida 
+            de <strong>14 meses de aluguel</strong> com o Sr. Barriga, o proprietário da vila. Mesmo possuindo pavio 
+            curto e frequentemente distribuindo cascudos no Chaves, ele possui um grande coração e 
+            nunca deixa o garoto desamparado.</p>
+            
+            
+            <h3>Chiquinha (Maria Antonieta de las Nieves)</h3>
+            <img id="personagem" src="Imagens/FotoChiquinha.jfif" alt="FotoChiquinha"/>
+            
+            <p> <strong>Filha do Seu Madruga</strong>, essa menina sardenta e baixinha é uma verdadeira pestinha: 
+                mais inteligente que o Chaves e o Quico, Chiquinha vive aprontando e enganando 
+                os meninos com suas artimanhas. Mesmo gostando de encher o saco do Chavinho, 
+                Chiquinha não esconde seu carinho pelo garoto, a quem sempre defende e ajuda. 
+                Por conta das suas malcriações, seu pai vive ganhando bofetadas de dona Florinda, 
+                a vizinha valentona.</p>
+            
+            <h3>Quico (Carlos Villagrán)</h3>
+            <img id="personagem" src="Imagens/FotoQuico.jfif" alt="FotoQuico"/>
+            
+            <p> <strong>Famoso por suas bochechas</strong>, digamos, avantajadas, Quico é um menino mimado. 
+                Filho da Dona Florinda mas órfão de pai, ele têm os melhores brinquedos e 
+                sempre tem dinheiro para doces e refrescos.</p>
+            
+            <p>Ele adora provocar inveja no Chaves, embora esteja sempre disposto a brincar com ele. 
+                Quico não é lá a mais inteligente das crianças e vive tirando os outros do sério. 
+                O resultado disso são os frequentes beliscões que ele ganha do Seu Madruga, mas que 
+                são sempre vingadas pela sua mãe, a Dona Florinda.</p>
+            
+            <h3>Dona Florinda (Florinda Meza)</h3>
+            <img id="personagem" src="Imagens/FotoDonaFlorinda.jfif" alt="FotoDonaFlorinda"/>
+            
+            <p> <strong>Dona Florinda</strong> é a mãe de Quico e talvez a mais abastada dos moradores da vila. 
+                Sempre de cara fechada e com pouca paciência para as trapalhadas do Chaves, 
+                ela não economiza bofetadas na hora de lidar com o Seu Madruga, vizinho que ela despreza. 
+                Mas toda a sua braveza vai embora quando o Professor Girafales aparece para visitá-la: 
+                apaixonada, ela suspira ao vê-lo e até amansa sua fama de briguenta quando seu amado chega 
+                para tomar uma xícara de café.</p>
+                        
+            <h3>Dona Clotilde (Angelines Fernández)</h3>
+            <img id="personagem" src="Imagens/FotoDonaClotilde.jfif" alt="FotoDonaClotilde"/>
+            
+            <p>Também conhecida como " <strong>Bruxa do 71</strong>", Dona Clotilde é uma senhora de idade que vive sozinha.
+                Constantemente lidando com as travessuras das crianças, ela está longe de merecer seu apelido: 
+                embora perca a paciência frequentemente, a moradora do 71 se importa bastante com as crianças.
+                </p>
+                
+            <p>Seu verdadeiro amor, no entanto, é Seu Madruga: mesmo sendo rejeitada pelo vizinho, Dona Clotilde 
+                não desiste de tentar conquistá-lo com favores e comidas. Mas, se depender da Chiquinha, as chances
+                da Bruxa, quero dizer, Dona Clotilde não são nada boas.</p>
+            
+            <h3>Seu Barriga (Édgar Vivar)</h3>
+            <img id="personagem" src="Imagens/FotoSeuBarriga.jfif" alt="FotoSeuBarriga"/>
+            
+            <p> <strong>Dono da Vila</strong>, Seu Barriga cobra pessoalmente o aluguel dos seus inquilinos. O trabalho, no entanto, 
+                não é nada fácil: cada vez que ele chega na vila, Chaves o recebe com uma pancada acidental. Isso 
+                para não falar nas constantes fugas de Seu Madruga para não saldar sua eterna dívida de 14 meses de 
+                aluguel. Rico, Seu Barriga tem uma casa enorme fora da Vila. Ele possui um filho, Nhonho, e uma esposa 
+                que nunca aparece no seriado. Apesar de pão duro, ele nunca se nega a ajudar o Chaves mesmo com as 
+                frequentes pancadas.</p>
+            
+            <p>Rico, Seu Barriga tem uma casa enorme fora da Vila. Ele possui um filho, Nhonho, e uma esposa 
+                que nunca aparece no seriado. Apesar de pão duro, ele nunca se nega a ajudar o Chaves mesmo com as 
+                frequentes pancadas.</p>
+            
+            <h3>Professor Girafales (Rubén Aguirre)</h3>
+            <img id="personagem" src="Imagens/FotoProfessorGirafales.jfif" alt="FotoProfessorGirafales"/>
+            
+            <p>O dedicado <strong>Professor Girafales</strong> é talvez o homem mais escolarizado do seriado. Apesar de às vezes ser meio 
+                pedante, o Mestre Linguiça (apelido recebido pelas crianças) é dedicado e faz de tudo pela educação dos 
+                seus alunos. Ele vai à Vila com frequência para visitar Dona Florinda, por quem é apaixonado. Sempre com 
+                seus modos rebuscados e palavras complicadas, Girafales é um romântico à moda antiga, que sempre leva flores 
+                para a sua amada.</p>
+            
+            <h3>Nhonho (Édgar Vivar) </h3>
+            <img id="personagem" src="Imagens/FotoNhonho.jfif" alt="FotoNhonho"/>
+            
+            <p> <strong>Nhonho</strong> é o único filho do Seu Barriga. Mimado, ele costuma ter os melhores brinquedos da turma. Ele é bem 
+                guloso e nunca está disposto a dividir seus sanduíches com o Chaves. Mas Nhonho também é um dos mais 
+                inteligentes da turma, sempre se destacando nas aulas do Professor Girafales. Sua primeira aparição foi 
+                em 1974, no primeiro episódio na escolinha. O personagem passou a fazer parte do elenco com maior frequência 
+                nas temporadas finais.</p>
+            
+            <h3>Dona Neves (Maria Antonieta de las Nieves)</h3>
+            <img id="personagem" src="Imagens/FotoDonaNeves.jfif" alt="FotoDonaNeves"/>
+            
+            <p> <strong>Bisavó da Chiquinha</strong>, Dona Neves é muito parecida com a sua bisneta tanto no físico quanto na astúcia. 
+            A personagem apareceu originalmente em 1978 e acabou por substituir o Seu Madruga quando ele deixou o 
+            programa em 1979. Atrapalhada e um pouco senil, Dona Neves tem uma rivalidade com Dona Florinda e 
+            parece ter herdado a mesma dívida de 14 meses de aluguel do seu neto, o Seu Madruga.</p>
+            
+            <h3>Godínez (Horácio Gómez Bolaños)</h3>
+            <img id="personagem" src="Imagens/FotoGodínez.jfif" alt="FotoGodinez"/>
+            
+            <p> <strong>Um garoto malandro e preguiçoso</strong> que se senta no fundão da escolinha. Apesar de não aparecer 
+                com tanta frequência na série, Godínez é presença garantida em todos os episódios que se 
+                passam na sala de aula. Apesar de não ser um aluno exemplar, ele é esperto e sempre tem 
+                uma resposta para tudo na ponta da língua! O personagem é interpretado pelo irmão de 
+                Roberto Gómez Bolaños, Horácio.</p>
+            
+            <h3>Pópis (Florinda Meza)</h3>
+            <img id="personagem" src="Imagens/FotoPopis.jfif" alt="FotoPopis"/>
+            
+            <p> <strong>Pópis</strong> é a <strong>sobrinha de Dona Florinda</strong> e prima do Quico. Com sua voz fina e sempre com a 
+                sua boneca Serafina em mãos, ela é mimada e bastante ingênua, sendo alvo frequente das 
+                traquinagens das outras crianças. Ela apareceu pela primeira vez durante a ausência de 
+                Chiquinha, quando a atriz Maria Antonieta de las Nieves ficou grávida e precisou se afastar da série.</p>
+            
+            
+            
+            
+            <p style="color: red; margin-top: 5em;" >Ao longo de oito temporadas exibidas de forma aleatória no Brasil, a produção atingiu seu auge em 1975 com a expansão 
+                da vila e episódios especiais, mas sofreu baixas importantes nos anos finais com as saídas de Carlos Villagrán (Quico) 
+                em 1978 e Ramón Valdés (Seu Madruga) em 1979. </p>
+            
+            <p>Atualmente, Chaves é exibido pelos canais de televisão SBT e Multishow e deixando um legado eterno.</p>
+            
+            
+            <footer>
+                <p style="text-align: center;">&copy;2026 História do Chaves.</p>
+            </footer>
+            
+        </main>
+    </body>
+</html>
