@@ -18,6 +18,7 @@
             request.setCharacterEncoding("UTF-8");
             
             String nome = request.getParameter("nome");
+            String nomeAntigo = request.getParameter("nomeAntigo");
             String email = request.getParameter("email");
             int pg1 = Integer.parseInt(request.getParameter("r1"));
             int pg2=Integer.parseInt(request.getParameter("r2"));
@@ -30,7 +31,7 @@
             
         %>
         <% EditarDAO ex = new EditarDAO(); %>
-        <a href="<% ex.Editar(nome,email,pg1,pg2,pg3,pg4,pg5,pg6,pg7,pg8);%>"Salvar Alterações</a>
+        <a href="<% ex.Editar(nome,nomeAntigo,email,pg1,pg2,pg3,pg4,pg5,pg6,pg7,pg8);%>"Salvar Alterações</a>
         <script>
                     window.location.href = "Listar.jsp";
         </script>

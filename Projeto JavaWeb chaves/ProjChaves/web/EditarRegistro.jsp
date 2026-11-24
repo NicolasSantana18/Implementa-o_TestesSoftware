@@ -142,6 +142,9 @@
         
         <form method="post" action="SalvarEdicao.jsp">
             <h2>Editar Registro</h2>
+            
+            <input type="hidden" name="nomeAntigo" value="<%= nome%>">
+            
             <p> Nome: <input type="text" name="nome" value=<%= nome%>><p>
             Email: <input type="text" name="email" value=<%= email%>><p>
             Resposta 1: <input type="text" name="r1" value=<%= re1%>><p>

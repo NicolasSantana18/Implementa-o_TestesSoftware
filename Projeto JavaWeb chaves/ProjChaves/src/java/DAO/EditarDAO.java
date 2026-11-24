@@ -16,21 +16,22 @@ public class EditarDAO {
     Connection conexao;
     PreparedStatement sql;
     
-    public void Editar(String nm, String email, int r1, int r2, int r3, int r4, int r5, int r6, int r7, int r8 ){
+    public void Editar(String nm, String nomeAntigo , String email, int r1, int r2, int r3, int r4, int r5, int r6, int r7, int r8 ){
         
         try{
             conexao = ConexaoBD.conectar();
-            sql = conexao.prepareStatement("update barril set email=?,R1=?,R2=?,R3=?,R4=?, R5 = ?, R6 = ?, R7 = ?, R8 = ?  where nome=?");
-            sql.setString(1, email);
-            sql.setInt(2, r1);
-            sql.setInt(3, r2);
-            sql.setInt(4, r3);
-            sql.setInt(5, r4);
-            sql.setInt(6, r5);
-            sql.setInt(7, r6);
-            sql.setInt(8, r7);
-            sql.setInt(9, r8);
-            sql.setString(10, nm);
+            sql = conexao.prepareStatement("update barril set nome = ?, email=?,R1=?,R2=?,R3=?,R4=?, R5 = ?, R6 = ?, R7 = ?, R8 = ?  where nome=?");
+            sql.setString(1, nm);
+            sql.setString(2, email);
+            sql.setInt(3, r1);
+            sql.setInt(4, r2);
+            sql.setInt(5, r3);
+            sql.setInt(6, r4);
+            sql.setInt(7, r5);
+            sql.setInt(8, r6);
+            sql.setInt(9, r7);
+            sql.setInt(10, r8);
+            sql.setString(11, nomeAntigo);
             int verifica = sql.executeUpdate();
             
             if(verifica > 0){
