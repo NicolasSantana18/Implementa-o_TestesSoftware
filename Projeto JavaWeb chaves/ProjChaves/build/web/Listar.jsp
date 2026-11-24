@@ -109,11 +109,13 @@
                 box-sizing: border-box;
                 font-family: 'Segoe UI', Arial, sans-serif;
             }
+            
+            
 
             body {
                 background-color: #f1f1f1;
                 margin: 0;
-                padding: 30px 15px;
+                padding: 0;
             }
 
             .container {
@@ -197,6 +199,11 @@
         
     </head>
     <body>
+        
+        <%
+            request.setCharacterEncoding("UTF-8");
+            response.setCharacterEncoding("UTF-8");
+        %>
         
         <header>
             

@@ -17,7 +17,7 @@ public class ConexaoBD {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/vilabd","root","");
+            conexao = DriverManager.getConnection("jdbc:mysql://localhost:3306/vilabd?useUnicode=true&characterEncoding=UTF-8","root","");
             return conexao;
         }
         
