@@ -95,12 +95,14 @@
                 margin-right: 60px;
                 padding-top: 6px;
                 padding-bottom: 6px;
+                font-weight: bold;
             }
             
-            #listar{
+            #relatorio{
                 margin-left: 60px;
                 padding-top: 6px;
                 padding-bottom: 6px;
+                font-weight: bold;
             }
             
             ﻿html, body, div, table, th, td, h1, a{
@@ -209,7 +211,7 @@
             
             <nav>
                 <a id="voltar" href="index.html">Voltar</a>
-                <a id="listar" href="Listar.jsp">Relatório</a>
+                <a id="relatorio" href="Listar.jsp">Relatório</a>
             </nav>
                    
         </div>
