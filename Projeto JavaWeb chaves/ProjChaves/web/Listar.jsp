@@ -218,7 +218,7 @@
             
             <nav>
                 <a id="voltar" href="index.html">Voltar</a>
-                <a id="relatorio" href="Listar.jsp">Relatório</a>
+                <a id="relatorio" href="RelatorioResumo.jsp">Relatório</a>
             </nav>
                    
         </div>

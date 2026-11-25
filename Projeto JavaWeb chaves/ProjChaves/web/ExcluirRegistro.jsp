@@ -21,8 +21,17 @@
             
             if(ex.Excluir(nome)== true){
             
-                JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
+                JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso / Nome do Registro:" +  nome);
             
+        %>
+        
+        <script>
+                    window.location.href = "Listar.jsp";
+        </script>
+        
+        
+                
+        <%        
             }
             
             else {
