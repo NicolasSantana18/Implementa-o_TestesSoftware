@@ -118,9 +118,9 @@
                 border-radius: 8px;
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
-            h3 {
+            h2 ,h3 {
                 text-align: center;
-                color: #009688;
+                color: orange;
             }
             .resumo-box {
                 background-color: #e0f2f1;
@@ -169,9 +169,9 @@
         </div>
         
         
-        <div>
+        <div class="container">
             
-            <h1 style="margin-left: 50px;">Resumo dos Registros - Vila do Chaves</h1>
+            <h2>Resumo dos Registros - Vila do Chaves</h2>
             
             <%
                 RelatorioDAO rel = new RelatorioDAO();
