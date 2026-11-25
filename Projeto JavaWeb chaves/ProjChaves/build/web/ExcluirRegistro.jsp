@@ -21,7 +21,7 @@
             
             if(ex.Excluir(nome)== true){
             
-                JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso / Nome do Registro:Apache Tomcat/8.5.96 " +  nome);
+                JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso / Nome do Registro: " +  nome);
             
         %>
         
