@@ -4,6 +4,7 @@
     Author     : alunocmc
 --%>
 
+
 <%@page import="DAO.RelatorioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -104,6 +105,46 @@
                 font-weight: bold;
             }
             
+            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background-color: #f1f1f1;
+                padding: 30px 15px;
+            }
+            .container {
+                max-width: 900px;
+                margin: auto;
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            h3 {
+                text-align: center;
+                color: #009688;
+            }
+            .resumo-box {
+                background-color: #e0f2f1;
+                border-left: 5px solid #009688;
+                padding: 15px;
+                margin-bottom: 25px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 25px;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+            th {
+                background-color: #009688;
+                color: white;
+            }
+            
             
         </style>
     </head>
@@ -113,7 +154,7 @@
             
             <img id="icone" src="Imagens/IconeChaves.jpg" alt="IconeChaves"/>
             
-            <h1 id="chaves">A História do Chaves</h1>
+            <h1>A História do Chaves</h1>
             
             
         </header>
@@ -130,7 +171,7 @@
         
         <div>
             
-            <h1>Resumo dos Registros - Vila do Chaves</h1>
+            <h1 style="margin-left: 50px;">Resumo dos Registros - Vila do Chaves</h1>
             
             <%
                 RelatorioDAO rel = new RelatorioDAO();
@@ -152,8 +193,8 @@
                 String[] colunas = {"R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8"};
             %>
             
-            <div>
-                Total de Intrevistados: <%= totalEntrevistados %>
+            <div class="resumo-box">
+                Total de Registros: <%= totalEntrevistados %>
             </div>
             
             <%
@@ -212,7 +253,6 @@
                 }
             %>
             
-            <a href="index.html">Voltar à página Inicial</a>
             
         </div>        
         
