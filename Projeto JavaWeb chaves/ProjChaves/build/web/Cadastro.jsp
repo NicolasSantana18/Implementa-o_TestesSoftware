@@ -123,6 +123,34 @@
                 font-size: 16px;
                 font-weight: 500;
             }
+            
+            .acerto { color: #2e7d32; }
+            .erro { color: #c62828; }
+
+            .lista-respostas {
+                list-style: none;
+                padding: 0;
+                margin: 20px 0;
+            }
+
+            .lista-respostas li {
+                padding: 14px 16px;
+                margin-bottom: 12px;
+                border-radius: 8px;
+                border-left: 6px solid #ccc;
+                background-color: #f9f9f9;
+                line-height: 1.5;
+            }
+
+            .lista-respostas li.item-acerto {
+                border-left-color: #2e7d32;
+                background-color: #e8f5e9;
+            }
+
+            .lista-respostas li.item-erro {
+                border-left-color: #c62828;
+                background-color: #ffebee;
+            }
 
             
     </style>
@@ -180,7 +208,29 @@
                 int[] respostasUsuario = {r1, r2, r3, r4, r5, r6, r7, r8};
                 
                 // Ajuste os números abaixo (1 a 5) conforme as opções corretas do seu Cadastro.html
-                int[] gabarito = {4, 2, 3, 1, 5, 2, 4, 1}; 
+                int[] gabarito = {4, 2, 4, 3, 5, 2, 4, 1}; 
+                
+                String[] perguntas = {
+                        "1. Em que ano a série Chaves chegou ao Brasil?",
+                        "2. Onde o Chaves realmente mora?",
+                        "3. Quantos meses de aluguel o Seu Madruga deve ao Seu Barriga?",
+                        "4. Qual é o apelido que as crianças deram para a Dona Clotilde?",
+                        "5. Quem é o filho do Seu Barriga?",
+                        "6. O que o Professor Girafales sempre leva para a Dona Florinda?",
+                        "7. Qual é o nome da boneca que a Pópis sempre carrega?",
+                        "8. Qual personagem tem o hábito de beliscar o Quico?"
+                    };
+
+                    String[][] opcoesTexto = {
+                        {"1 - 1971", "2 - 1975", "3 - 1978", "4 - 1984", "5 - 1990"},
+                        {"1 - Dentro do barril", "2 - Na casa número 8", "3 - Na casa número 71", "4 - Na casa do Seu Barriga", "5 - Na escolinha"},
+                        {"1 - 2 meses", "2 - 5 meses", "3 - 10 meses", "4 - 14 meses", "5 - 20 meses"},
+                        {"1 - Dona Florinda", "2 - Mestre Linguiça", "3 - Bruxa do 71", "4 - Serafina", "5 - Dona Neves"},
+                        {"1 - Quico", "2 - Chaves", "3 - Godínez", "4 - Professor Girafales", "5 - Nhonho"},
+                        {"1 - Sanduíches", "2 - Flores", "3 - Bonecas", "4 - Dinheiro", "5 - Brinquedos"},
+                        {"1 - Chiquinha", "2 - Clotilde", "3 - Florinda", "4 - Serafina", "5 - Neves"},
+                        {"1 - Seu Madruga", "2 - Seu Barriga", "3 - Professor Girafales", "4 - Godínez", "5 - Nhonho"}
+                    };
 
                 int acertos = 0;
                 int erros = 0;
@@ -200,26 +250,39 @@
         <ul>
         <%
             for (int i = 0; i < 8; i++) {
-                if (respostasUsuario[i] == gabarito[i]) {
+                int respUser = respostasUsuario[i];
+                int respCerta = gabarito[i];
+                String textoMarcado = opcoesTexto[i][respUser - 1];
+                String textoCorreto = opcoesTexto[i][respCerta - 1];
+
+                if (respUser == respCerta) {
         %>
-                    <li style="color: green;">Pergunta <%= (i + 1) %>: Acertou (Opção <%= respostasUsuario[i] %>)</li>
+                    <li class="item-acerto">
+                        <strong><%= perguntas[i] %></strong><br>
+                        Sua resposta: <strong><%= textoMarcado %></strong> — <span class="acerto"><strong>✔ Acertou!</strong></span>
+                    </li>
         <%
                 } else {
         %>
-                    <li style="color: red;">Pergunta <%= (i + 1) %>: Errou (Você marcou <%= respostasUsuario[i] %> | Correta: <%= gabarito[i] %>)</li>
+                    <li class="item-erro">
+                        <strong><%= perguntas[i] %></strong><br>
+                        Sua resposta: <strong><%= textoMarcado %></strong> — <span class="erro"><strong>✘ Errou!</strong></span><br>
+                        Resposta correta: <strong><%= textoCorreto %></strong>
+                    </li>
         <%
                 }
             }
         %>
-            </ul>
-            <a href="index.html">Voltar ao Início</a>
+        </ul>
+        
         <%
             } else {
         %>
-            <p>Não foi possível cadastrar o registro.</p>
+                <h2 class="erro">Não foi possível cadastrar o registro.</h2>
+                
         <%
             }
-        %>
             
+        %>
     </body>
 </html>
