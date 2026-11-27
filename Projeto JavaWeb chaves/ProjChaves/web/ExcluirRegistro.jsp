@@ -41,8 +41,5 @@
             }
         %>
         
-        <p>Nome excluído: <%= nome %></p>
-        <a href="index.html">Voltar a página Inicial</a>
-        
     </body>
 </html>
